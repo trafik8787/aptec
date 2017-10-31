@@ -1,0 +1,19 @@
+.logo {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/logo.png');
+	background-image: url(/images/spacer.gif);
+}
+.top_nav {
+	width: expression(this.parentNode.offsetWidth-276+'px');
+}
+.request form {
+	height: 200px;
+}
+.request .subm {
+	margin-left: 114px;
+}
+.content .links {
+	margin-left: 7px;
+}
+.content .books {
+	height: 1px;
+}
