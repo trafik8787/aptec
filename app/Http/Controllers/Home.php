@@ -7,6 +7,20 @@ use Illuminate\Support\Facades\Mail;
 
 class Home extends Controller
 {
+    /**
+     * Home constructor.
+     */
+    public function __construct () {
+
+        parent::__construct();
+
+        parent::setBlocRenderLeft(['books', 'links']);
+
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index ()
     {
         //dd(get_class_methods(url()));
@@ -17,6 +31,10 @@ class Home extends Controller
         return view('page.home');
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function sendform (Request $request)
     {
 

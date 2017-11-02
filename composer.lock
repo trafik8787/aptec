@@ -1384,7 +1384,7 @@
         },
         {
             "name": "mtdowling/cron-expression",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mtdowling/cron-expression.git",
@@ -2788,12 +2788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/trafik8787/lara-crud.git",
-                "reference": "3aff775959881d118b6518406803115213b66b3c"
+                "reference": "d8f7bd8823adca2b68efedf5d993dad4fa18b54f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trafik8787/lara-crud/zipball/3aff775959881d118b6518406803115213b66b3c",
-                "reference": "3aff775959881d118b6518406803115213b66b3c",
+                "url": "https://api.github.com/repos/trafik8787/lara-crud/zipball/d8f7bd8823adca2b68efedf5d993dad4fa18b54f",
+                "reference": "d8f7bd8823adca2b68efedf5d993dad4fa18b54f",
                 "shasum": ""
             },
             "require": {
@@ -2821,7 +2821,7 @@
                 }
             ],
             "description": "CRUD for shop",
-            "time": "2017-10-28 22:05:00"
+            "time": "2017-10-31 19:24:22"
         },
         {
             "name": "vlucas/phpdotenv",

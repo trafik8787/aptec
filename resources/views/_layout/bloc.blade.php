@@ -1,12 +1,10 @@
 
-<div class="links">
+@foreach(\App\Http\Controllers\Controller::getBlocRenderLeft() as $item)
 
-    @include('_layout.books')
+    <div class="links">
 
-</div>
+        @include('_layout.'.$item)
 
-<div class="links">
+    </div>
 
-    @include('_layout.links')
-
-</div>
+@endforeach

@@ -14,7 +14,17 @@
 
 Route::get('/', 'Home@index')->name('home.name');
 Route::get('services', 'About@index')->name('about.name');
+
 Route::get('questions', 'Faq@index')->name('faq.name');
+Route::get('questions/list', 'Faq@showFaqList')->name('showFaqList.name');
+//страница вопроса
+Route::get('questions/view/{id}.html', 'Faq@showFaqNotPage')->name('showFaq.name');
+Route::get('questions/view/{idPage?}/{id}.html', 'Faq@showFaq')->name('showFaqCat.name');
+//страница категории с пагинацией
+Route::get('questions/{idCat}/{idPage?}', 'Faq@showCategoryFaq')->name('showCategoryFaq.name')->where(['idCat' => '[0-9]+', 'idPage' => '[0-9]+']);
+
+
+
 Route::get('books', 'Books@index')->name('books.name');
 Route::get('video', 'Video@index')->name('video.name');
 

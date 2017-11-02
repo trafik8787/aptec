@@ -8,6 +8,7 @@ use Trafik8787\LaraCrud\Models\NodeModelConfiguration;
 
 class ArticleNode extends NodeModelConfiguration implements NodeInterface {
 
+
     public static $alias_url = 'article';
     public function showDisplay ()
     {
@@ -15,6 +16,7 @@ class ArticleNode extends NodeModelConfiguration implements NodeInterface {
         $this->setTitle('Статьи');
         $this->fieldShow(['ArticleID','Title']);
         $this->buttonCopy(false);
+        $this->fieldOrderBy(1, 'desc');
     }
 
 
@@ -34,11 +36,14 @@ class ArticleNode extends NodeModelConfiguration implements NodeInterface {
 
         $this->enableEditor(['Txt']);
 
-        $section = SectionNodeModel::all('SectionID', 'Section')->toArray();
+        $section = SectionNodeModel::all('SectionID', 'Section', 'Articles')->where('Articles', '=', 1)->toArray();
+
         $section_result = array();
         foreach ($section as $item) {
             $section_result[$item['SectionID']] =  $item['Section'];
         }
+
+
 
 
         $this->setTypeField([
@@ -52,7 +57,7 @@ class ArticleNode extends NodeModelConfiguration implements NodeInterface {
 
     public function showInsertDisplay()
     {
-
+       $this->showEditDisplay();
     }
 
     public function showDelete()
