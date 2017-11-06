@@ -127,6 +127,17 @@ class Faq extends Controller
 
 
     /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function PrintShowFaqNotPage ($id)
+    {
+        $data = $this->faq->where('QuestionID', '=', $id)->where('Active', '=', 1)->first();
+        $category = $data->sections;
+        return view('page.print_faq_showFaq', compact('data', 'category'));
+    }
+
+
+    /**
      * @return mixed
      * получаем рандомные 3 вопроса для блока с права популярные вопросы
      */
@@ -134,5 +145,7 @@ class Faq extends Controller
     {
         return self::$sthis->faq->inRandomOrder()->take(3)->get();
     }
+
+
 
 }

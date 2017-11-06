@@ -9,10 +9,17 @@ class LaraCrudProvider extends ServiceProvider
 
     protected $navigation = [
         'App\Http\Node\ArticleNode' => [
-            'priory' => 2,
+            'priory' => 1,
             'title' => 'Статьи',
             'icon' => 'fa-tree'
         ],
+
+        'App\Http\Node\FaqNode' => [
+            'priory' => 2,
+            'title' => 'Вопросы и ответы',
+            'icon' => 'fa-tree'
+        ],
+
         'App\Http\Node\PageNode' => [
             'priory' => 3,
             'title' => 'Страницы',
@@ -28,6 +35,7 @@ class LaraCrudProvider extends ServiceProvider
 
     protected $nodes = [
         'App\Http\Node\Model\ArticleNodeModel'         => 'App\Http\Node\ArticleNode',
+        'App\Http\Node\Model\FaqNodeModel'         => 'App\Http\Node\FaqNode',
         'App\Http\Node\Model\HomeNodeModel'         => 'App\Http\Node\HomeNode',
         'App\Http\Node\Model\SettingsNodeModel'         => 'App\Http\Node\SettingsNode',
         'App\Http\Node\Model\PageNodeModel'         => 'App\Http\Node\PageNode',

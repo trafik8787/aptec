@@ -84,11 +84,28 @@ class Articles extends Controller
     }
 
 
+    /**
+     * @param $idPage
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function article ($idPage, $id)
     {
         return $this->articleNotPage($id);
     }
 
+
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function PrintArticleNotPage ($id)
+    {
+        $article = $this->article->where('ArticleID', '=', $id)->active()->first();
+        $category = $this->article->find($id)->sections;
+        return view('page.print_article',  compact('article', 'category'));
+
+    }
 
     /**
      * @return mixed
