@@ -128,4 +128,12 @@ class Articles extends Controller
         return self::$sthis->article->category();
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public static function getFeedItems()
+    {
+        return ArticleNodeModel::all()->take(20);
+    }
+
 }

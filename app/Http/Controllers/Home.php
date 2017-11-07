@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Node\Model\ContactNodeModel;
 use App\Http\Node\Model\PageNodeModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -40,15 +41,21 @@ class Home extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function sendform (Request $request)
+    public function sendform (Request $request, ContactNodeModel $contact)
     {
 
-        //dd(url()->current());
+//        dd($request->input());
         $code = $request->input('CaptchaCode');
         $isHuman = captcha_validate($code);
 
         if ($isHuman) {
-            dd($request->input());
+            $contact->lastname = $request->input('form_name');
+            $contact->address = $request->input('form_data');
+            $contact->tel = $request->input('form_phone');
+            $contact->email = $request->input('form_email');
+            $contact->save();
+            session()->flash('susses', 'Спасибо за обращение!');
+            return redirect()->back();
         } else {
             session()->flash('qwe', 'Не верный код');
             return redirect()->back();

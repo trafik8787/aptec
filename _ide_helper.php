@@ -9619,6 +9619,16 @@ namespace Illuminate\Support\Facades {
         {
             return \Illuminate\Routing\Router::macroCall($method, $parameters);
         }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function feeds($baseUrl = '')
+        {
+            return \Illuminate\Routing\Router::feeds($baseUrl);
+        }
          
     }
 

@@ -3,9 +3,11 @@
 namespace App\Http\Node\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 use Trafik8787\LaraCrud\EloquentModel\All;
 
-class ArticleNodeModel extends All
+class ArticleNodeModel extends All implements Feedable
 {
     private $category = [];
     protected $table = 'Pravo1Articles';
@@ -44,6 +46,19 @@ class ArticleNodeModel extends All
     public function scopeActive ($query)
     {
         return $query->where('Active', '=', 1);
+    }
+
+
+    public function toFeedItem()
+    {
+
+        return FeedItem::create()
+            ->id($this->ArticleID)
+            ->title($this->Title)
+            ->summary($this->Announcement)
+            ->updated($this->updated_at)
+            ->link('/articles/view/'.$this->ArticleID.'.html')
+            ->author('Ави Аптекман');
     }
 }
 

@@ -11,6 +11,7 @@
 |
 */
 
+Route::feeds();
 
 Route::get('/', 'Home@index')->name('home.name');
 Route::get('services', 'About@index')->name('about.name');
@@ -39,3 +40,4 @@ Route::get('articles', 'Articles@index')->name('articles.name');
 
 
 Route::post('sendform', 'Home@sendform')->name('home.sendform');
+

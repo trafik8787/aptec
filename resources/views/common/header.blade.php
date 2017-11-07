@@ -17,7 +17,7 @@
     <link href="/css/main.css" rel="stylesheet" type="text/css" media="screen">
     <!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
-
+    @include('feed::links')
 </head>
 <body cz-shortcut-listen="true">﻿
 

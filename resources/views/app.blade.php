@@ -24,12 +24,6 @@
 
         <br clear="all">
 
-        <!--<div class="books">
-            <div class="column"><a href="http://kniga.israelinfo.ru/catalog/22/98/179180" title="Купить книгу «Уголовное право в Израиле»"><img src="/images/book_1.gif" alt="" /><span class="hd">Уголовное право в Израиле</span>Обзор норм израильского уголовного права, написанный одним из известнейших и опытнейших адвокатов Израиля. Книга написана в практическом ключе и содержит сведения, которые необходимы каждому жителю нашей страны.</a></div>
-            <div class="column"><a href="http://kniga.israelinfo.ru/catalog/22/98/201672" title="Купить книгу «Семейное право в Израиле»"><img src="/images/book_2.gif" alt="" /><span class="hd">Семейное право в Израиле</span>Предлагаемая новая книга является первым справочником по семейному праву Израиля, издаваемом на русском языке. На многие вопросы м ответит книга, в которой содержатся конкретные рекомендации опытного адвоката.</a></div>
-            <br clear="all" />
-        </div>
-        <div class="books_bot"></div>-->
     </div>
 
 
@@ -45,6 +39,7 @@
     <div class="request">
         <form action="/sendform" method="post">
             {{ csrf_field() }}
+            <span style="color: green">{{Session::get('susses')}}</span>
             <p style="font:8pt verdana;margin-top:15px;">В нерабочее время заполните форму <br>и с Вами свяжутся в часы работы</p>
             <label style="font:8pt verdana;">Имя, фамилия</label>
             <input type="text" class="inp" name="form_name" value="">
