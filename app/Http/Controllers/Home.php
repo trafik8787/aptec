@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Node\Model\PageNodeModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class Home extends Controller
 {
+    private $home;
+
     /**
      * Home constructor.
      */
-    public function __construct () {
+    public function __construct (PageNodeModel $pageNodeModel) {
 
         parent::__construct();
-
+        $this->home = $pageNodeModel->find(1);
         parent::setBlocRenderLeft(['books', 'links']);
-
+        parent::setSeoTitle($this->home->h_t);
+        parent::setSeoDescription($this->home->h_d);
+        parent::setSeoKeywords($this->home->h_k);
     }
 
     /**

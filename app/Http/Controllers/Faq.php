@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Node\Model\FaqNodeModel;
+use App\Http\Node\Model\PageNodeModel;
 use App\Http\Node\Model\SectionNodeModel;
 use App\Http\Node\Model\SettingsNodeModel;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use Illuminate\Pagination\Paginator;
 class Faq extends Controller
 {
     private $faq;
+    private $page_faq;
     private $section;
     private $settings;
     private $paginator;
@@ -20,14 +22,20 @@ class Faq extends Controller
      * Faq constructor.
      * @param FaqNodeModel $model
      */
-    public function __construct (FaqNodeModel $model, SectionNodeModel $modelSection, SettingsNodeModel $settings) {
+    public function __construct (FaqNodeModel $model, SectionNodeModel $modelSection, SettingsNodeModel $settings, PageNodeModel $pageNodeModel) {
 
         parent::__construct();
 
         $this->settings = $settings->find(1);
         $this->faq = $model;
+        $this->page_faq = $pageNodeModel->find(3);
         $this->section = $modelSection;
         self::$sthis = $this;
+
+        parent::setSeoTitle($this->page_faq->h_t);
+        parent::setSeoDescription($this->page_faq->h_d);
+        parent::setSeoKeywords($this->page_faq->h_k);
+
         parent::setBlocRenderLeft(['popular_faq', 'books']);
     }
 
@@ -39,6 +47,7 @@ class Faq extends Controller
        // dd(self::popularFaq());
         //dd($this->faq->orderBy('AnswerDate', 'desc')->take($this->settings->count_last_faq)->get());
         $data = [
+            'data' => $this->page_faq->data,
             'last_faq' => $this->faq->orderBy('AnswerDate', 'desc')->take($this->settings->count_last_faq)->get(),
             'category' => $this->getCategoryList()
         ];

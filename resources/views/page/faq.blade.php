@@ -1,7 +1,10 @@
 @extends('app')
 @section('content')
 
-    <div style="display:table; min-height:1px; _height:1px">
+    <div style="display:table; min-height:1px; _height:1px; padding-top: 13px;">
+
+        {!! $data !!}
+
         <p><b>Последние вопросы по праву</b></p>
 
 

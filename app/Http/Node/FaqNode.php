@@ -13,6 +13,14 @@ class FaqNode extends NodeModelConfiguration implements NodeInterface {
     {
 
         $this->fieldShow(['QuestionID', 'Title', 'Question']);
+        $this->fieldName([
+            'Title' => 'Название',
+            'Question' => 'Вопрос'
+        ]);
+
+        $this->buttonGroupDelete(false);
+        $this->buttonCopy(false);
+        $this->buttonAdd(false);
     }
 
 
@@ -54,7 +62,7 @@ class FaqNode extends NodeModelConfiguration implements NodeInterface {
 
     public function showInsertDisplay()
     {
-
+        $this->showEditDisplay();
     }
 
     public function showDelete()

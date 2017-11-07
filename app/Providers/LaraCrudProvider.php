@@ -25,6 +25,11 @@ class LaraCrudProvider extends ServiceProvider
             'title' => 'Страницы',
             'icon' => 'fa-tree'
         ],
+        'App\Http\Node\VideoNode' => [
+            'priory' => 4,
+            'title' => 'Видео',
+            'icon' => 'fa-tree'
+        ],
         'App\Http\Node\SettingsNode' => [
             'priory' => 5,
             'title' => 'Настройки',
@@ -39,6 +44,7 @@ class LaraCrudProvider extends ServiceProvider
         'App\Http\Node\Model\HomeNodeModel'         => 'App\Http\Node\HomeNode',
         'App\Http\Node\Model\SettingsNodeModel'         => 'App\Http\Node\SettingsNode',
         'App\Http\Node\Model\PageNodeModel'         => 'App\Http\Node\PageNode',
+        'App\Http\Node\Model\VideoNodeModel'         => 'App\Http\Node\VideoNode',
     ];
 
     /**

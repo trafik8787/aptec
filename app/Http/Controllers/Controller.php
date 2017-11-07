@@ -53,7 +53,7 @@ class Controller extends BaseController
     /**
      * @param string $value
      */
-    public static function setSeoTitle (string $value)
+    public static function setSeoTitle ($value)
     {
         self::$title = $value;
     }
@@ -61,7 +61,7 @@ class Controller extends BaseController
     /**
      * @param string $value
      */
-    public static function setSeoDescription (string $value)
+    public static function setSeoDescription ($value)
     {
         self::$description = $value;
     }
@@ -69,7 +69,7 @@ class Controller extends BaseController
     /**
      * @param string $value
      */
-    public static function setSeoKeywords (string $value)
+    public static function setSeoKeywords ($value)
     {
         self::$keywords = $value;
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Node\Model\ArticleNodeModel;
+use App\Http\Node\Model\PageNodeModel;
 use App\Http\Node\Model\SectionNodeModel;
 use App\Http\Node\Model\SettingsNodeModel;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ class Articles extends Controller
 {
 
     private $article;
+    private $page_article;
     private $section;
     private $settings;
     private static $sthis;
@@ -23,12 +25,21 @@ class Articles extends Controller
      * @param SectionNodeModel $modelSection
      * @param SettingsNodeModel $settings
      */
-    public function __construct (ArticleNodeModel $article, SectionNodeModel $modelSection, SettingsNodeModel $settings) {
+    public function __construct (ArticleNodeModel $article, SectionNodeModel $modelSection, SettingsNodeModel $settings, PageNodeModel $pageNodeModel) {
         parent::__construct();
+
         $this->article = $article;
         $this->section = $modelSection;
         $this->settings = $settings->find(1);
+
+        $this->page_article = $pageNodeModel->find(4);
+
+        parent::setSeoTitle($this->page_article->h_t);
+        parent::setSeoDescription($this->page_article->h_d);
+        parent::setSeoKeywords($this->page_article->h_k);
+
         self::$sthis = $this;
+
         parent::setBlocRenderLeft(['category_articles','books']);
     }
 
@@ -40,7 +51,8 @@ class Articles extends Controller
     public function index ()
     {
         $article = $this->article->active()->lastArticles($this->settings->count_last_article);
-        return view('page.articles', compact('article'));
+        $data = $this->page_article->data;
+        return view('page.articles', compact('article', 'data'));
     }
 
     /**

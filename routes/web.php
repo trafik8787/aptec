@@ -28,6 +28,7 @@ Route::get('questions/{idCat}/{idPage?}', 'Faq@showCategoryFaq')->name('showCate
 
 Route::get('books', 'Books@index')->name('books.name');
 Route::get('video', 'Video@index')->name('video.name');
+Route::get('video/view/{id}.html', 'Video@showVideo')->name('ShowVideo.name');
 
 Route::get('articles/view/{id}.html', 'Articles@articleNotPage')->name('articleNotPage.name')->where(['id' => '[0-9]+']);
 Route::get('print/articles/view/{id}.html', 'Articles@PrintArticleNotPage')->name('PrintArticleNotPage.name')->where(['id' => '[0-9]+']);
