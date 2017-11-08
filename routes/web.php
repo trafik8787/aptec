@@ -42,8 +42,3 @@ Route::post('sendform', 'Home@sendform')->name('home.sendform');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
