@@ -37,7 +37,9 @@ Route::get('articles/view/{idPage}/{id}.html', 'Articles@article')->name('articl
 Route::get('articles/{idCat}/{idPage?}', 'Articles@category')->name('category.name')->where(['idCat' => '[0-9]+', 'idPage' => '[0-9]+']);
 Route::get('articles', 'Articles@index')->name('articles.name');
 
-
-
 Route::post('sendform', 'Home@sendform')->name('home.sendform');
 
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
