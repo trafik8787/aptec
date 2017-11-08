@@ -44,10 +44,10 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * при попытке попасть на форму регистрации перебрасываем на форму логина
      */
-    protected function showRegistrationForm()
-    {
-        //return redirect('/login');
-    }
+//    protected function showRegistrationForm()
+//    {
+//        //return redirect('/login');
+//    }
 
     /**
      * Get a validator for an incoming registration request.
