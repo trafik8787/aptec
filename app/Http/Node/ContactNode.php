@@ -14,6 +14,15 @@ class ContactNode extends NodeModelConfiguration implements NodeInterface {
         $this->buttonGroupDelete(false);
         $this->buttonCopy(false);
         $this->buttonAdd(false);
+
+        $this->buttonEdit(false);
+
+        $this->fieldName(['lastname' => 'Имя Фамилия',
+            'address' => 'Адрес',
+            'tel' => 'Телефон',
+            'email' => 'Email'
+            ]);
+
     }
 
 
