@@ -94,9 +94,8 @@ class Faq extends Controller
             });
         }
 
-
         $data = $this->section->find($idCat);
-        $questions = $data->questions()->paginate(10);
+        $questions = $data->questions()->paginate($this->settings->count_faq_page);
 
 
         $data = [
@@ -152,7 +151,7 @@ class Faq extends Controller
      */
     public static function popularFaq()
     {
-        return self::$sthis->faq->inRandomOrder()->take(3)->get();
+        return self::$sthis->faq->inRandomOrder()->take(self::$sthis->settings->count_random_faq)->get();
     }
 
 

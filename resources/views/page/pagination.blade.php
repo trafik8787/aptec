@@ -1,5 +1,3 @@
-
-
 @if ($paginator->hasPages())
     <div align="center">
         <nobr>
@@ -7,7 +5,7 @@
             @if ($paginator->onFirstPage())
                 <span>&lt;&lt;</span>
             @else
-                <a href="{{$fragment_url.\Illuminate\Pagination\Paginator::getNumberPage($paginator->previousPageUrl())}}" rel="prev">&lt;</a>
+                <a href="{{$fragment_url.$paginator->onFirstPage()}}" rel="prev">&lt;</a>
             @endif
 
             {{-- Pagination Elements --}}
@@ -24,7 +22,7 @@
                             <b>{{ $page }}</b>
                         @else
 
-                            <a href="{{$fragment_url.\Illuminate\Pagination\Paginator::getNumberPage($url)}}">{{ $page }}</a>
+                            <a href="{{$fragment_url.$page}}">{{ $page }}</a>
                         @endif
                     @endforeach
                 @endif
@@ -32,7 +30,7 @@
 
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
-                <a href="{{$fragment_url.\Illuminate\Pagination\Paginator::getNumberPage($paginator->nextPageUrl())}}" rel="next">&gt;</a>
+                <a href="{{$fragment_url.$paginator->lastPage()}}" rel="next">&gt;</a>
             @else
                 <span>&gt;&gt;</span>
             @endif

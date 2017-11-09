@@ -21,15 +21,19 @@
             <script type="text/javascript">
                 window.___gcfg = {lang: 'ru'};
 
-                (function() {
-                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                (function () {
+                    var po = document.createElement('script');
+                    po.type = 'text/javascript';
+                    po.async = true;
                     po.src = 'https://apis.google.com/js/plusone.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(po, s);
                 })();
             </script>
 
             <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="link" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj" style="text-align:right"></div>
+            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="link"
+                 data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj" style="text-align:right"></div>
 
         </div>
 
@@ -47,17 +51,16 @@
         </div>
 
 
-
-
         <br>
 
         <br type="_moz">
 
 
-
-
         <div class="forPrint">
-            <p><b>Адвокатская контора «А.&nbsp;Аптекман, адвокаты, судебные исполнители»</b><br>Бат Ям, ул. Нисинбаум д. 30 "Бат Ямон" 3 этаж, офис 314. Телефон: <nobr>054-7622000</nobr></p>
+            <p><b>Адвокатская контора «А.&nbsp;Аптекман, адвокаты, судебные исполнители»</b><br>Бат Ям, ул. Нисинбаум д. 30 "Бат
+                Ямон" 3 этаж, офис 314. Телефон:
+                <nobr>054-7622000</nobr>
+            </p>
             <p><a href="http://aptekman.co.il">www.aptekman.co.il</a></p>
         </div>
 

@@ -7,7 +7,6 @@
 
         <p><b>Последние вопросы по праву</b></p>
 
-
         @foreach($last_faq as $item)
 
             <div><a href="/questions/view/{{$item->QuestionID}}.html"><b>{{$item->Title}}</b></a></div>
@@ -19,13 +18,10 @@
 
         @endforeach
 
-
         <hr>
         <p><b>Вопросы по темам</b></p>
 
-
         <ul>
-
             @foreach($category as $item)
                 <li><a href="/questions/{{$item['SectionID']}}/"><b>{{$item['Section']}}</b></a></li>
             @endforeach
@@ -33,7 +29,6 @@
         </ul>
 
         <br>
-
 
         <div class="forPrint">
             <p><b>Адвокатская контора «А.&nbsp;Аптекман, адвокаты, судебные исполнители»</b><br>Бат Ям, ул. Нисинбаум д. 30 "Бат

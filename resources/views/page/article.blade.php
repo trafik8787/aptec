@@ -22,20 +22,25 @@
             <script type="text/javascript">
                 window.___gcfg = {lang: 'ru'};
 
-                (function() {
-                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                (function () {
+                    var po = document.createElement('script');
+                    po.type = 'text/javascript';
+                    po.async = true;
                     po.src = 'https://apis.google.com/js/plusone.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(po, s);
                 })();
             </script>
         </div>
 
         <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="link" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj" style="text-align:right"></div>
+        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="link"
+             data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,lj" style="text-align:right"></div>
 
         <br>
 
-        <p style="text-align:center"><a target="_blank" href="/print/articles/view/{{$article->ArticleID}}.html">Версия для печати</a></p>
+        <p style="text-align:center"><a target="_blank" href="/print/articles/view/{{$article->ArticleID}}.html">Версия для
+                печати</a></p>
 
 
         <div class="forPrint">
