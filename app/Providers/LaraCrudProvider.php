@@ -11,34 +11,34 @@ class LaraCrudProvider extends ServiceProvider
         'App\Http\Node\ArticleNode' => [
             'priory' => 1,
             'title' => 'Статьи',
-            'icon' => 'fa-tree'
+            'icon' => 'fa-file-text-o'
         ],
 
         'App\Http\Node\FaqNode' => [
             'priory' => 2,
             'title' => 'Вопросы и ответы',
-            'icon' => 'fa-tree'
+            'icon' => 'fa-question-circle'
         ],
 
         'App\Http\Node\PageNode' => [
             'priory' => 3,
             'title' => 'Страницы',
-            'icon' => 'fa-tree'
+            'icon' => 'fa-newspaper-o'
         ],
         'App\Http\Node\VideoNode' => [
             'priory' => 4,
             'title' => 'Видео',
-            'icon' => 'fa-tree'
+            'icon' => 'fa-file-video-o'
         ],
         'App\Http\Node\ContactNode' => [
             'priory' => 5,
             'title' => 'Контакты',
-            'icon' => 'fa-tree'
+            'icon' => ' fa-child'
         ],
         'App\Http\Node\SettingsNode' => [
             'priory' => 6,
             'title' => 'Настройки',
-            'icon' => 'fa-tree'
+            'icon' => 'fa-cog'
         ]
 
     ];
