@@ -2859,12 +2859,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/trafik8787/lara-crud.git",
-                "reference": "bbca277c566d785639f5c3673dfbb60270bf2dd5"
+                "reference": "fc6e67d7f7fb9334da8e677b75379c98ef492f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/trafik8787/lara-crud/zipball/bbca277c566d785639f5c3673dfbb60270bf2dd5",
-                "reference": "bbca277c566d785639f5c3673dfbb60270bf2dd5",
+                "url": "https://api.github.com/repos/trafik8787/lara-crud/zipball/fc6e67d7f7fb9334da8e677b75379c98ef492f5e",
+                "reference": "fc6e67d7f7fb9334da8e677b75379c98ef492f5e",
                 "shasum": ""
             },
             "require": {
@@ -2892,7 +2892,7 @@
                 }
             ],
             "description": "CRUD for shop",
-            "time": "2017-11-11 17:08:31"
+            "time": "2017-11-11 17:58:25"
         },
         {
             "name": "vlucas/phpdotenv",
