@@ -72,7 +72,7 @@ class Articles extends Controller
 
         $data = $this->section->find($idCat);
 //        $articles = $data->articles()->paginate($this->settings->count_article_page);
-        $articles = $data->articles()->orderBy('created_at', 'desk')->paginate(10);
+        $articles = $data->articles()->active()->orderBy('created_at', 'desk')->paginate(10);
 
         $data = [
             'category' => $data,
