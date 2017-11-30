@@ -14,9 +14,21 @@ class ArticleNode extends NodeModelConfiguration implements NodeInterface {
     {
 
         $this->setTitle('Статьи');
-        $this->fieldShow(['ArticleID','Title']);
+        $this->fieldShow(['ArticleID','Title', 'Active']);
+        $this->fieldName(['Title' => 'Название', 'Active' => 'Активация']);
         $this->buttonCopy(false);
         $this->fieldOrderBy(1, 'desc');
+        $this->columnColorWhere('Active', '==', 0, '#e6b3b3');
+        $this->tableRowsRenderCollback(function ($obj){
+            if ($obj->Active == 0) {
+                $obj->Active = '<i class="glyphicon glyphicon-remove-sign text-red"></i>';
+            } else {
+                $obj->Active = '<i class="glyphicon glyphicon-ok-sign text-green"></i>';
+            }
+
+            return $obj;
+        });
+
     }
 
 
