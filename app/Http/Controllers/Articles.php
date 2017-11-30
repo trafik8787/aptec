@@ -50,7 +50,7 @@ class Articles extends Controller
      */
     public function index ()
     {
-        $article = $this->article->active()->lastArticles($this->settings->count_last_article);
+        $article = $this->article->active()->orderBy('created_at', 'desk')->lastArticles($this->settings->count_last_article);
         $data = $this->page_article->data;
         return view('page.articles', compact('article', 'data'));
     }
