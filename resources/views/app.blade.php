@@ -40,13 +40,13 @@
             <span style="color: green">{{Session::get('susses')}}</span>
             <p style="font:8pt verdana;margin-top:15px;">В нерабочее время заполните форму <br>и с Вами свяжутся в часы работы</p>
             <label style="font:8pt verdana;">Имя, фамилия</label>
-            <input type="text" class="inp" name="form_name" value="">
+            <input type="text" class="inp" name="name" value="">
             <label style="font:8pt verdana;">Адрес</label>
-            <input type="text" class="inp" name="form_data" value="">
+            <input type="text" class="inp" name="address" value="">
             <label style="font:8pt verdana;">Телефон</label>
-            <input type="text" class="inp" name="form_phone" value="">
+            <input type="text" class="inp" name="phone" value="">
             <label style="font:8pt verdana;">E-mail</label>
-            <input type="email" class="inp" name="form_email" value="">
+            <input type="email" class="inp" name="email" value="">
             <span style="color: red">{{Session::get('qwe')}}</span>
             <label style="font:8pt verdana;">Введите код</label>
             {!! captcha_image_html('ContactCaptcha') !!}

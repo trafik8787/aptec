@@ -58,13 +58,13 @@ class Home extends Controller
         $isHuman = captcha_validate($code);
 
         if ($isHuman) {
-            $contact->lastname = $request->input('form_name');
-            $contact->address = $request->input('form_data');
-            $contact->tel = $request->input('form_phone');
-            $contact->email = $request->input('form_email');
+            $contact->lastname = $request->input('name');
+            $contact->address = $request->input('address');
+            $contact->tel = $request->input('phone');
+            $contact->email = $request->input('email');
             $contact->save();
 
-            Mail::to($this->settings->email)->send(new SendContact($request->input()));
+            Mail::to($this->settings->email_user)->send(new SendContact($request->input()));
 
             session()->flash('susses', 'Спасибо за обращение!');
             return redirect()->back();
