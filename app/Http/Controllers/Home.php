@@ -64,7 +64,9 @@ class Home extends Controller
             $contact->email = $request->input('email');
             $contact->save();
 
-            Mail::to($this->settings->email_user)->send(new SendContact($request->input()));
+            Mail::to($this->settings->email_user)
+                ->cc(array($this->settings->admin_email2, $this->settings->admin_email3, $this->settings->admin_email4))
+                ->send(new SendContact($request->input()));
 
             session()->flash('susses', 'Спасибо за обращение!');
             return redirect()->back();
