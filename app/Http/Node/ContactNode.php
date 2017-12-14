@@ -17,13 +17,14 @@ class ContactNode extends NodeModelConfiguration implements NodeInterface {
 
         $this->fieldOrderBy(1, 'desc');
         $this->buttonEdit(false);
-        $this->fieldShow(['id', 'lastname', 'address', 'tel', 'email']);
+        $this->fieldShow(['id', 'lastname', 'address', 'tel', 'email', 'created_at']);
         $this->fieldName([
             'id' => 'ID',
             'lastname' => 'Имя Фамилия',
             'address' => 'Адрес',
             'tel' => 'Телефон',
-            'email' => 'Email'
+            'email' => 'Email',
+            'created_at' => 'Дата создания'
             ]);
 
     }

@@ -11,6 +11,16 @@ class SettingsNode extends NodeModelConfiguration {
     public function showDisplay ()
     {
         $this->setTitle('Настройки');
+        $this->fieldShow(['email_user',
+            'count_last_article',
+            'count_article_page',
+            'count_last_faq',
+            'count_faq_page',
+            'count_random_faq',
+            'admin_email2',
+            'admin_email3',
+            'admin_email4'
+        ]);
         $this->fieldName([
             'email_user' => 'E-Mail получателя формы',
             'count_last_article' => 'Количество последних статей',

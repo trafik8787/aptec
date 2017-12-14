@@ -11,7 +11,7 @@ return [
     'middleware' => ['web', 'auth'],
     'url_group' => 'admin',
     'field_disable' => [
-        'created_at',
+      //  'created_at',
         'updated_at'
     ]
 ];
