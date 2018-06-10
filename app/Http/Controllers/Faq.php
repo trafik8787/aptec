@@ -77,6 +77,10 @@ class Faq extends Controller
         $data = $this->faq->where('QuestionID', '=', $id)->where('Active', '=', 1)->first();
         $category = $data->sections;
 
+        parent::setSeoTitle($data->Title);
+        parent::setSeoDescription($data->Description);
+        parent::setSeoKeywords($data->KeyWords);
+
         return view('page.faq_showFaq', compact('data', 'category'));
     }
 

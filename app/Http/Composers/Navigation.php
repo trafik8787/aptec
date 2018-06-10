@@ -27,7 +27,8 @@ class Navigation
      */
     public function compose (View $view)
     {
-        $view->with(['nav_category' => $this->page->select('name', 'href')->orderBy('sortorder', 'asc')->get()->toArray(),
+        $view->with([
+            'nav_category' => $this->page->select('name', 'href')->orderBy('sortorder', 'asc')->get()->toArray(),
             'title' => Controller::getSeoTitle(),
             'description' => Controller::getSeoDescription(),
             'keywords' => Controller::getSeoKeywords()

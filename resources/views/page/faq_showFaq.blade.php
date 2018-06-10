@@ -9,7 +9,7 @@
 
 
 
-        <h2>{{$data->Title}}</h2>
+        <h1>{{$data->Title}}</h1>
 
         <p>{{strip_tags($data->Question)}}</p>
 

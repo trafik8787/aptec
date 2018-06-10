@@ -6,7 +6,7 @@
 
         <div align="right">{{$article->created_at->format('d.m.Y')}}</div>
 
-        <p><b>{{$article->Title}}</b></p>
+        <p><h1>{{$article->Title}}</h1></p>
 
 
         {!! $article->Txt !!}

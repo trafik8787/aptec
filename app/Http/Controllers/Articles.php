@@ -92,7 +92,10 @@ class Articles extends Controller
     {
         $article = $this->article->where('ArticleID', '=', $id)->active()->first();
         $category = $this->article->find($id)->sections;
-        //dd($article);
+        parent::setSeoTitle($article->Title);
+        parent::setSeoDescription($article->Description);
+        parent::setSeoKeywords($article->KeyWords);
+
         return view('page.article', compact('article', 'category'));
     }
 
