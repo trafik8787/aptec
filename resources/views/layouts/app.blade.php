@@ -31,7 +31,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="/"><b>Aptecman </b>Admin</a>
+        <a href="/"><b>Aptekman </b>Admin</a>
     </div>
 
     <div class="login-box-body">

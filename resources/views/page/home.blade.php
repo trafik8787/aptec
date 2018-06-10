@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 
-    <div style="display:table; min-height:1px; _height:1px">
+    <div style="display:table; min-height:1px; _height:1px; padding-top: 23px;">
 
         {!! $data !!}
 
@@ -15,7 +15,6 @@
             <img onclick="document.location.href='http://translate.google.com/';"
                  style="position: absolute !important; z-index: -1 !important; right: 1px !important; top: -20px !important; cursor: pointer !important;-webkit-border-radius: 20px; background-color: rgba(200, 200, 200, 0.3) !important; padding: 3px 5px 0 !important; margin: 0 !important;"
                  alt="" src="http://www.google.com/uds/css/small-logo.png"></div>
-
 
         <h2><a href="/articles/">Статьи</a></h2>
 

@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-12-14.
+    * Generated on 2018-06-10 13:32:43.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -45,6 +45,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -138,10 +139,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -182,6 +184,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -275,10 +278,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -319,6 +323,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -412,10 +417,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -456,6 +462,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -549,10 +556,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -593,6 +601,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -686,10 +695,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -730,6 +740,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -823,10 +834,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -867,6 +879,7 @@ namespace PHPSTORM_META {
         'Trafik8787\LaraCrud\Contracts\Component\ComponentManagerBuilderInterface' => \Trafik8787\LaraCrud\Form\Component\ComponentManagerBuilder::class,
         'Trafik8787\LaraCrud\Contracts\Component\TabsInterface' => \Trafik8787\LaraCrud\Form\Component\Tabs::class,
         'Trafik8787\LaraCrud\Contracts\Component\UploadFileInterface' => \Trafik8787\LaraCrud\Form\UploadFile::class,
+        'Trafik8787\LaraCrud\Contracts\ActionTableInterface' => \Trafik8787\LaraCrud\Table\ActionTable::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'translation.loader' => \Illuminate\Translation\FileLoader::class,
         'translator' => \Illuminate\Translation\Translator::class,
@@ -960,10 +973,11 @@ namespace PHPSTORM_META {
         'redis' => \Illuminate\Redis\RedisManager::class,
         'auth.password' => \Illuminate\Auth\Passwords\PasswordBrokerManager::class,
         'auth.password.broker' => \Illuminate\Auth\Passwords\PasswordBroker::class,
-        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'command.ide-helper.generate' => \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand::class,
         'command.ide-helper.models' => \Barryvdh\LaravelIdeHelper\Console\ModelsCommand::class,
         'command.ide-helper.meta' => \Barryvdh\LaravelIdeHelper\Console\MetaCommand::class,
+        'command.ide-helper.eloquent' => \Barryvdh\LaravelIdeHelper\Console\EloquentCommand::class,
+        'command.tinker' => \Laravel\Tinker\Console\TinkerCommand::class,
         'html' => \Collective\Html\HtmlBuilder::class,
         'form' => \Collective\Html\FormBuilder::class,
     ]));
@@ -996,5 +1010,6 @@ namespace PHPSTORM_META {
     override(\head(0), elementType(0));
     override(\last(0), elementType(0));
     override(\with(0), type(0));
+    override(\tap(0), type(0));
 
 }

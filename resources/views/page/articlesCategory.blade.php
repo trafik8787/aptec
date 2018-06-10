@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 
-    <div style="display:table; min-height:1px; _height:1px">
+    <div style="display:table; min-height:1px; _height:1px; padding-top: 33px;">
         <p><b>{{$category->Section}}</b></p>
 
         @foreach($articles as $item)
