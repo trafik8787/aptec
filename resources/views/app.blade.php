@@ -61,17 +61,6 @@
 <br clear="all">
 
 
-<form action="" class="search" id="searchbox_005526002188423334622:yaydshnxre4" onsubmit="return false;">
-    <b>Найти ответ</b>
-    <input type="text" class="inp" value="" name="q" placeholder="Пользовательского поиска"
-           style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url('https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png') left center no-repeat rgb(255, 255, 255); text-indent: 48px;">
-    <input type="image" src="/images/submit_search.gif" class="subm">
-    <p style="font:8pt verdana;padding:2px 0 0 84px;clear:left;color:#f6f6f6;">Поиск среди 10.000 ответов и статей по праву</p>
-    <input name="siteurl" type="hidden" value="www.aptekman.co.il/"><input name="ref" type="hidden"
-                                                                           value="www.aptekman.co.il/books/"><input name="ss"
-                                                                                                                    type="hidden"
-                                                                                                                    value="">
-</form>
 <div class="catBottom"></div>
 <script type="text/javascript"
         src="http://www.google.com/coop/cse/brand?form=searchbox_005526002188423334622%3Ayaydshnxre4&amp;lang=ru"></script>

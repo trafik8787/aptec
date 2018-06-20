@@ -22,9 +22,17 @@
 <body cz-shortcut-listen="true">
 
 
-
 <div class="container">
     <a href="/" title="Ави Аптекман – адвокат, автор книг 'Уголовное Право в Израиле' и 'Семейное Право в Израиле'. Адвокатская контора в Израиле " class="logo"></a>
+
+
+    <div style="position: absolute;right: 0; top: 56px;">
+        <form method="get" action="{{route('search')}}">
+            <input type="text" name="q" style="height: 23px;width: 239px;">
+            <button type="submit" style="height: 29px">Поиск</button>
+        </form>
+
+    </div>
 
 <div class="top_nav">
     <table>

@@ -11,6 +11,7 @@ use App\Http\Node\Model\VideoNodeModel;
 use App\Mail\SendContact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use JanDrda\LaravelGoogleCustomSearchEngine\LaravelGoogleCustomSearchEngine;
 use Spatie\Sitemap\SitemapGenerator;
 
 class Home extends Controller
@@ -39,8 +40,7 @@ class Home extends Controller
      */
     public function index (ArticleNodeModel $articleNodeModel, FaqNodeModel $faqNodeModel, VideoNodeModel $videoNodeModel)
     {
-//        SitemapGenerator::create('http://aptekman.test')
-//            ->writeToFile(public_path('sitemap.xml'));
+
         $data = $this->home->data;
         $article = $articleNodeModel->get()->last();
         $faq = $faqNodeModel->orderBy('AnswerDate', 'desc')->take($this->settings->count_last_faq)->get();

@@ -41,6 +41,7 @@ Route::get('conditions.html', 'Conditions@index')->name('conditions.name');
 
 Route::post('sendform', 'Home@sendform')->name('home.sendform');
 
+Route::get('search/{page?}', 'SearchController@index')->name('search');
 
 Auth::routes();
 

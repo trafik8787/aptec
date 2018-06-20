@@ -3,6 +3,8 @@
 namespace App\Http\Pagi;
 
 use Illuminate\Pagination\AbstractPaginator;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Str;
 
 /**
@@ -53,5 +55,17 @@ class Paginate extends AbstractPaginator
     public static function getNumberPage ($url)
     {
         return self::$getNumberPage[$url];
+    }
+
+
+    public static function makeLengthAware($collection, $total, $perPage, $q = null)
+    {
+        $paginator = new LengthAwarePaginator(
+            $collection,
+            $total,
+            $perPage,
+            Paginator::resolveCurrentPage(),
+            ['path' => Paginator::resolveCurrentPath()]);
+        return str_replace('/?', '?', $paginator->links('page.pagination_search', ['fragment_url' => '/search/', 'q' => $q]));
     }
 }
